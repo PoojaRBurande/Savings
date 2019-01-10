@@ -1,0 +1,59 @@
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<context:component-scan base-package="com.sharada.*"></context:component-scan>
+   <!-- bean definitions go h0ere -->
+   <bean id="address" class="com.sharada.EmpAddress">
+   		<property name="cityName" value="Pune"></property>
+   		<property name="pinCode" value="410120"></property>
+   </bean>
+   <!-- using constructor -->
+    <bean id="empId1" class="com.sharada.Employee">
+   		 <constructor-arg index ="0" value="1" type="int"></constructor-arg>
+   		 <constructor-arg index = "1" value="Pooja" type="String"></constructor-arg>
+   		 <constructor-arg index = "2" ref="address"></constructor-arg>  
+   </bean> 
+  
+   <!-- using setter and inner beans -->
+   <bean id="empId" class="com.sharada.Employee" >
+   		<property name="empId" value="101"></property>
+   		<property name="empName" value="Pooja"></property>
+   		<property name="empAddress">
+   			<bean class="com.sharada.EmpAddress">
+   				<property name="cityName" value="Pune"></property>
+   				<property name="pinCode" value="410120"></property>
+   			</bean>
+   		</property>
+   		<property name="dependent">
+   		<list>
+   		<value>Mother</value>
+   		<value>Father</value>
+   		</list>
+   		</property>
+   		<property name="provident">
+   		<set>
+   		<value>2560</value>
+   		<value>2563</value>
+   		<value>2369</value>
+   		
+   		</set></property>
+   		<property name="property">
+   		<props><prop key="behavior">good</prop></props>
+   		</property>
+   		<property name="skills">
+   		<map>
+   			<entry key="primary" value="java"></entry>
+   			<entry key="secondory" value="UI"></entry>
+   		</map></property>
+   </bean>
+  
+   <bean id="circle" class="com.sharada.shape.Circle"></bean>
+   <bean id="rectangle" class="com.sharada.shape.Rectangle" init-method="myInit" destroy-method="destroy" scope="prototype"></bean>
+   <bean id="triangle" class="com.sharada.shape.Triangle"></bean>
+
+</beans>
