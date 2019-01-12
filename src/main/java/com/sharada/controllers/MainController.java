@@ -43,11 +43,14 @@ public class MainController {
 		System.out.println("Entered Name: "+request.getParameter("inputName"));
 		String name=request.getParameter("inputName");
 		if(name=="pooja" || name.equalsIgnoreCase("pooja"))
-		{ModelAndView  model=new ModelAndView("home"); 
-		return model;}
+		{
+			ModelAndView  model=new ModelAndView("home");
+			model.addObject("nameEntered", name);
+			return model;
+		}
 		else{
 			ModelAndView  model=new ModelAndView("login");
-			
+			model.addObject("invalid", "Invalid Login Id or Password "+name);
 			return model;
 		}
 		

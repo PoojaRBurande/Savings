@@ -7,6 +7,6 @@
 <title>Home Page</title>
 </head>
 <body>
-Welcome home
+Welcome home ${nameEntered}
 </body>
 </html>

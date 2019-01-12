@@ -7,8 +7,12 @@
 <title>Login</title>
 </head>
 <body>
+<div color=red>
+	${invalid}
+</div>
 <form action="validateLogin" method="post">
 Enter Name<input type="text" name="inputName" id="inputName">
+Enter Password<input type="password" name="password" id="password">
 <input type="submit">
 </form>
 </body>
