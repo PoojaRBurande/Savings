@@ -8,20 +8,34 @@
         http://www.springframework.org/schema/mvc
 		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         ">
-        
-    <mvc:annotation-driven />
+
+	<mvc:annotation-driven />
 	<context:annotation-config />
-    <context:component-scan base-package="com.savings.beans" />
-    <context:component-scan base-package="com.savings.controllers" />
-    <context:component-scan base-package="com.savings.services" />
-    
-   
-   
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/pages/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
-    
-    <mvc:resources location= "/WEB-INF/static/server.html" mapping="/static/**"></mvc:resources>
-    <mvc:resources location= "/WEB-INF/pages/login.jsp" mapping="/1.0.2/"></mvc:resources>
+	<context:component-scan base-package="com.savings.beans" />
+	<context:component-scan base-package="com.savings.controllers" />
+	<context:component-scan base-package="com.savings.services" />
+
+
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/pages/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="com.savings.controllers.ApplicationException">
+					exception
+				</prop>
+			</props>
+		</property>
+		<property name="defaultErrorView" value="error"></property>
+	</bean>
+
+	<mvc:resources location="/WEB-INF/static/server.html"
+		mapping="/static/**"></mvc:resources>
+	<!-- <mvc:resources location= "/WEB-INF/pages/login.jsp" mapping="/1.0.2/"></mvc:resources> -->
 </beans>

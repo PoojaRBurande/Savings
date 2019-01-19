@@ -4,16 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login</title>
+<title>Insert title here</title>
 </head>
 <body>
-<div color=red>
-	${invalid}
-</div>
-<form action="validateLogin" method="post">
-Enter Name<input type="text" name="inputName" id="inputName">
-Enter Password<input type="password" name="password" id="password">
-<input type="submit">
-</form>
+<h4 >Please login first <a href="http://localhost:8080/1.0.2/">Login</a></h4>
 </body>
 </html>

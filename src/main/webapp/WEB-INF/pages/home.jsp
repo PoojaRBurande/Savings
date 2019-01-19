@@ -14,8 +14,7 @@ $("#balance").click(function(){
 			 alert("success"); 
 		  }});
 	  		
-	  });
-	
+	  });                                       
 $("#deposit").click(function(){
 	  alert("deposit");
 	  $.ajax({
