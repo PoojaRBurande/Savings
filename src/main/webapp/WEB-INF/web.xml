@@ -24,4 +24,18 @@ xmlns="http://java.sun.com/xml/ns/javaee"
          org.springframework.web.context.ContextLoaderListener
       </listener-class>
     </listener>
+    <filter>
+    <filter-name>RequestLoggingFilter</filter-name>
+    <filter-class>com.savings.services.RequestLoggingFilter</filter-class>
+    <init-param>
+    <param-name>test</param-name>
+    <param-value>testing</param-value>
+    </init-param>
+    </filter>
+    
+    <filter-mapping>
+    <filter-name>RequestLoggingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
 </web-app>

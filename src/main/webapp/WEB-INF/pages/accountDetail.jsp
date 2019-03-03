@@ -4,16 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login</title>
+<title>Account Details</title>
 </head>
 <body>
-<div color=red>
-	${message}
-</div>
-<form action="validateLogin" method="post">
-Enter Id<input type="text" name="id" id="id">
-Enter Password<input type="password" name="password" id="password">
-<input type="submit">
-</form>
+<h3>${name}, below is your transaction summary:</h3>
+<input type="hidden" value=${sessionId}>
 </body>
 </html>

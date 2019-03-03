@@ -14,8 +14,13 @@
 	<context:component-scan base-package="com.savings.beans" />
 	<context:component-scan base-package="com.savings.controllers" />
 	<context:component-scan base-package="com.savings.services" />
-
-
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value=""></property>
+	</bean>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -37,5 +42,5 @@
 
 	<mvc:resources location="/WEB-INF/static/server.html"
 		mapping="/static/**"></mvc:resources>
-	<!-- <mvc:resources location= "/WEB-INF/pages/login.jsp" mapping="/1.0.2/"></mvc:resources> -->
+	<mvc:resources location= "/WEB-INF/pages/login.jsp" mapping="/1.0.2/"></mvc:resources>
 </beans>

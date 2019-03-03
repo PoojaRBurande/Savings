@@ -4,16 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login</title>
+<title>Error Page</title>
 </head>
 <body>
-<div color=red>
-	${message}
-</div>
-<form action="validateLogin" method="post">
-Enter Id<input type="text" name="id" id="id">
-Enter Password<input type="password" name="password" id="password">
-<input type="submit">
-</form>
+<h1>Error</h1>
 </body>
 </html>
