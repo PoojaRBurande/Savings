@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.savings.exception.DataNotFoundException;
 import com.savings.services.LoginService;
 
 @Controller
@@ -56,6 +57,7 @@ public class MainController {
 			model.setViewName("login");
 			model.addObject("message", "Id or Password Incorrect, please try again");
 			return model;
+			
 	}
 	
 	@RequestMapping(value="/accountDetails" , method = RequestMethod.POST)

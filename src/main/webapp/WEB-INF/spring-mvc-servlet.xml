@@ -28,7 +28,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
-	<bean
+	<!-- <bean
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
@@ -38,7 +38,7 @@
 			</props>
 		</property>
 		<property name="defaultErrorView" value="error"></property>
-	</bean>
+	</bean> -->
 
 	<mvc:resources location="/WEB-INF/static/server.html"
 		mapping="/static/**"></mvc:resources>
