@@ -39,7 +39,7 @@
 		</property>
 		<property name="defaultErrorView" value="error"></property>
 	</bean> -->
-
+	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:resources location="/WEB-INF/static/server.html"
 		mapping="/static/**"></mvc:resources>
 	<mvc:resources location= "/WEB-INF/pages/login.jsp" mapping="/1.0.2/"></mvc:resources>
