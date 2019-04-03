@@ -45,6 +45,7 @@
 	<form action="accountDetails" method="post">
 		<input type="submit" value="Aoount Details">
 	</form>
+	<a href="resources/login1.jsp">Test</a>
 	
 </body>
 </html>
